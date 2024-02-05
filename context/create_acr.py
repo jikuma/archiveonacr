@@ -1,6 +1,6 @@
 from azure.identity import ClientSecretCredential
 from azure.mgmt.containerregistry import ContainerRegistryManagementClient
-from azure.mgmt.containerregistry.v2023_06_01_preview.models import Sku, SkuName, DebianArchivePackageSourceProperties, DebianArchiveProperties, Archive,ArchiveUpdateParameters
+from azure.mgmt.containerregistry.v2024_01_01_preview.models import Sku, SkuName, DebianArchivePackageSourceProperties, DebianArchiveProperties, Archive,ArchiveUpdateParameters
 
 # Set your Azure subscription ID, resource group name, and container registry name
 subscription_id = '48028acd-b54a-4a14-8e4c-a289a6ff61f9'
@@ -17,7 +17,7 @@ tenant_id = '72f988bf-86f1-41af-91ab-2d7cd011db47'
 credentials = ClientSecretCredential(tenant_id, client_id, client_secret)
 
 # Specify the API version you want to use
-api_version = "2023-06-01-preview" 
+api_version = "2024-01-01-preview" 
 
 # Create the Container Registry Management Client
 client = ContainerRegistryManagementClient(credentials, subscription_id, api_version=api_version)
